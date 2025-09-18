@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Right - Links */}
         <div className="flex space-x-6 mt-4 md:mt-0">
           <a
-            href="https://github.com/sowmia1808"
+            href="git remote add origin https://github.com/sowmia1808/my-portfolio.git"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition"
