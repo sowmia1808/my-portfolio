@@ -1,11 +1,14 @@
-"use client";
+
 
 import Image from "next/image";
 import Link from "next/link";
-
+import Skills from "./skills/page";
+import Experience from "./experience/ExperienceClient";
+import ContactPage from "./contact/page";
 export default function HomeClient() {
   return (
-    <section className="flex flex-col-reverse md:flex-row items-center justify-between max-w-6xl mx-auto py-20 px-6">
+    <div>
+    <section className="flex flex-col-reverse md:flex-row items-center justify-between max-w-6xl mx-auto py-20 px-6 mt-25">
       {/* Left - Text */}
       <div className="md:w-1/2 text-center md:text-left space-y-6">
         <h1 className="text-4xl sm:text-5xl font-bold">
@@ -32,13 +35,13 @@ export default function HomeClient() {
           >
             View My Projects
           </Link>
-            
+
         </div>
       </div>
 
       {/* Right - Image */}
       <div className="md:w-1/2 flex justify-center mb-10 md:mb-0">
-        <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden shadow-xl">
+        <div className="relative w-25 h-25 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-l overflow-hidden shadow-xl">
           <Image
             src="/images/pp.png"
             alt="Sowmia Drillo"
@@ -48,6 +51,11 @@ export default function HomeClient() {
         </div>
       </div>
     </section>
+    <Skills/>
+    <Experience/>
+    <ContactPage/>
+    
+     </div>
   );
 }
 

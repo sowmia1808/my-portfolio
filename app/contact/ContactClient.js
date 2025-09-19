@@ -1,37 +1,17 @@
 "use client";
+import { useState } from "react";
 
-import { useState, useEffect } from "react";
-import StructuredData from "@/components/StructuredData";
-
-export default function ContactClient() {
+export default function ContactPage() {
   const [formData, setFormData] = useState({
+    projectType: "",
+    services: "",
+    budget: "",
+    timeline: "",
     name: "",
     email: "",
-    phone: "",
+    website: "",
     message: "",
   });
-
-  const [mapUrl, setMapUrl] = useState("");
-
-  // Get current location for Google Maps
-  useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude } = position.coords;
-          setMapUrl(
-            `https://www.google.com/maps?q=${latitude},${longitude}&hl=en&z=14&output=embed`
-          );
-        },
-        () => {
-          // Fallback: Dubai
-          setMapUrl(
-            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115672.006!2d55.1713!3d25.0657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f437aa7c20a9f%3A0xbcb0ef1e!2sDubai!5e0!3m2!1sen!2sae!4v1694230800000!5m2!1sen!2sae"
-          );
-        }
-      );
-    }
-  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -40,77 +20,170 @@ export default function ContactClient() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    alert("Message sent successfully!");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    alert("Thank you! Your project inquiry has been sent.");
+    setFormData({
+      projectType: "",
+      services: "",
+      budget: "",
+      timeline: "",
+      name: "",
+      email: "",
+      website: "",
+      message: "",
+    });
   };
 
   return (
-    <section className="py-16 px-6 max-w-5xl mx-auto mt-15">
-      <h1 className="text-4xl font-bold text-center mb-12">Contact Me</h1>
+    <section className="py-20 px-6 sm:px-10 lg:px-20 max-w-4xl mx-auto bg-gray-50 dark:bg-gray-900 rounded-xl shadow-lg mt-25 mb-10">
+      <h6 className="text-xl sm:text-xl font-bold text-center mb-6 text-gray-900 dark:text-gray-100">
+        NEED A FULL STACK WEB DEVELOPER? LET'S BUILD SOMETHING.
+      </h6>
+      <p className="text-center text-gray-700 dark:text-gray-300 mb-12">
+        I'm ready to hear about your project. Don’t hesitate to get in touch using the form below.
+      </p>
 
-      <div className="grid md:grid-cols-2 gap-12">
-        {/* Left - Form */}
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-6 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg"
-        >
-          {["name", "email", "phone", "message"].map((field) => (
-            <div key={field} className="relative">
-              {field !== "message" ? (
-                <input
-                  type={field === "email" ? "email" : "text"}
-                  name={field}
-                  value={formData[field]}
-                  onChange={handleChange}
-                  required
-                  placeholder=" "
-                  className="peer w-full border-b-2 border-gray-300 dark:border-gray-600 bg-transparent py-2 focus:border-blue-500 focus:outline-none text-gray-900 dark:text-gray-100"
-                />
-              ) : (
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows="5"
-                  placeholder=" "
-                  className="peer w-full border-b-2 border-gray-300 dark:border-gray-600 bg-transparent py-2 focus:border-blue-500 focus:outline-none text-gray-900 dark:text-gray-100 resize-none"
-                />
-              )}
-              <label className="absolute left-0 -top-3.5 text-gray-500 dark:text-gray-400 text-sm transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-focus:-top-3.5 peer-focus:text-gray-500 peer-focus:text-sm">
-                {field.charAt(0).toUpperCase() + field.slice(1)}
-              </label>
-            </div>
-          ))}
+      <form
+        onSubmit={handleSubmit}
+        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+      >
+        {/* Project Type */}
+        <div className="flex flex-col">
+          <label className="mb-1 text-gray-700 dark:text-gray-300">Select Project Type</label>
+          <select
+            name="projectType"
+            value={formData.projectType}
+            onChange={handleChange}
+            required
+            className="p-3 border rounded-lg bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+          >
+            <option value="">Select Project Type</option>
+            <option value="Web App">Web App</option>
+            <option value="E-commerce">E-commerce</option>
+            <option value="Landing Page">Landing Page</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        {/* Services */}
+        <div className="flex flex-col">
+          <label className="mb-1 text-gray-700 dark:text-gray-300">Which Services Do You Need?</label>
+          <select
+            name="services"
+            value={formData.services}
+            onChange={handleChange}
+            required
+            className="p-3 border rounded-lg bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+          >
+            <option value="">Select Services</option>
+            <option value="Development">Development</option>
+            <option value="Development & Design">Development & Design</option>
+            <option value="Development, Design & SEO">Development, Design & SEO</option>
+            <option value="SEO">SEO</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        {/* Budget */}
+        <div className="flex flex-col">
+          <label className="mb-1 text-gray-700 dark:text-gray-300">Select Budget</label>
+          <select
+            name="budget"
+            value={formData.budget}
+            onChange={handleChange}
+            required
+            className="p-3 border rounded-lg bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+          >
+            <option value="">Select Budget</option>
+            <option value="Below $500">Below $500</option>
+            <option value="$500 - $1000">$500 - $1000</option>
+            <option value="$1000 - $3000">$1000 - $3000</option>
+            <option value="Above $3000">Above $3000</option>
+          </select>
+        </div>
+
+        {/* Timeline */}
+        <div className="flex flex-col  ">
+          <label className="mb-1 text-gray-700 dark:text-gray-300">Select Completion Time</label>
+          <select
+            name="timeline"
+            value={formData.timeline}
+            onChange={handleChange}
+            required
+            className="p-3 border rounded-lg bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+          >
+            <option value="">Select Timeline</option>
+            <option value="1-2 weeks">1-2 weeks</option>
+            <option value="3-4 weeks">3-4 weeks</option>
+            <option value="1-2 months">1-2 months</option>
+            <option value="Flexible">Flexible</option>
+          </select>
+        </div>
+
+        {/* Full Name */}
+        <div className="flex flex-col">
+          <label className="mb-1 text-gray-700 dark:text-gray-300">Full Name</label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            placeholder="John Doe"
+            className="p-3 border rounded-lg bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+          />
+        </div>
+
+        {/* Email */}
+        <div className="flex flex-col">
+          <label className="mb-1 text-gray-700 dark:text-gray-300">Email</label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            placeholder="email@example.com"
+            className="p-3 border rounded-lg bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+          />
+        </div>
+
+        {/* Website */}
+        <div className="flex flex-col">
+          <label className="mb-1 text-gray-700 dark:text-gray-300">Website URL (optional)</label>
+          <input
+            type="url"
+            name="website"
+            value={formData.website}
+            onChange={handleChange}
+            placeholder="https://example.com"
+            className="p-3 border rounded-lg bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+          />
+        </div>
+
+        {/* Message */}
+        <div className="flex flex-col md:col-span-2">
+          <label className="mb-1 text-gray-700 dark:text-gray-300">Your Message</label>
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            rows="5"
+            placeholder="Tell me about your project..."
+            className="p-3 border rounded-lg bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 resize-none"
+          />
+        </div>
+
+        {/* Submit */}
+        <div className="md:col-span-2">
           <button
             type="submit"
             className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Send Message
+            Send Inquiry
           </button>
-        </form>
-
-        {/* Right - Google Map */}
-        <div className="h-80 md:h-full rounded-lg overflow-hidden shadow-lg">
-          {mapUrl ? (
-            <iframe
-              title="My Location"
-              src={mapUrl}
-              width="100%"
-              height="100%"
-              className="border-0"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          ) : (
-            <p className="text-center text-gray-600 dark:text-gray-300">
-              Loading map...
-            </p>
-          )}
         </div>
-      </div>
-
+      </form>
     </section>
   );
 }
