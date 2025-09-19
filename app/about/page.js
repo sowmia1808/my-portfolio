@@ -1,46 +1,57 @@
-export default function About() {
+
+// app/about/page.js
+
+export const metadata = {
+  title: "About Mary Sowmia | Full Stack Developer & Freelance Web Developer",
+  description:
+    "Learn about Mary Sowmia 👋, Full Stack Developer and WordPress & SEO Specialist. Available for freelance projects in Dubai and UAE. Skilled in Next.js, React, Tailwind CSS, and MySQL.",
+  keywords: [
+    "Mary Sowmia",
+    "Full Stack Developer",
+    "Next.js Developer",
+    "React Developer",
+    "WordPress Developer",
+    "SEO Specialist",
+    "Freelance Web Developer",
+    "Dubai",
+    "UAE",
+  ],
+  robots: "index, follow",
+  openGraph: {
+    title: "About Mary Sowmia | Full Stack Developer & Freelance Web Developer",
+    description:
+      "Learn about Mary Sowmia 👋, Full Stack Developer and WordPress & SEO Specialist. Available for freelance projects in Dubai and UAE.",
+    url: "https://www.marysowmia.shop/about",
+    siteName: "Mary Sowmia Portfolio",
+    images: [
+      {
+        url: "https://www.marysowmia.shop/images/pp.png",
+        width: 800,
+        height: 800,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Mary Sowmia | Full Stack Developer & Freelance Web Developer",
+    description:
+      "Learn about Mary Sowmia 👋, Full Stack Developer and WordPress & SEO Specialist. Available for freelance projects in Dubai and UAE.",
+    images: ["https://www.marysowmia.shop/images/pp.png"],
+    creator: "@MarySowmia",
+  },
+};
+
+// app/about/page.js
+import AboutClient from "./AboutClient";
+import StructuredData from "@/components/StructuredData";
+
+export default function AboutPage() {
   return (
-    <section className="py-16 px-6 max-w-5xl mx-auto mt-10">
-      {/* Title */}
-      <h1 className="text-4xl font-bold text-center mb-8">About Me</h1>
-
-      {/* Layout */}
-      <div className="grid md:grid-cols-2 gap-10 items-center">
-        {/* Left - Image */}
-        <div className="flex justify-center">
-          <img
-            src="/images/pp.png"
-            alt="Profile"
-            className="rounded-lg shadow-lg w-100 h-100 object-contain"
-          />
-        </div>
-
-        {/* Right - Text */}
-        <div>
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            I’m <span className="font-semibold">Sowmia Drillo</span>, a
-            passionate <strong>Full Stack Developer</strong> with 5+ years of
-            experience building modern web applications and optimized websites.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            Skilled in <strong>React.js, Next.js, Tailwind CSS, Express.js, and
-            MySQL</strong>. I also specialize in{" "}
-            <strong>WordPress development and SEO optimization</strong> using
-            tools like <strong>AIOSEO</strong> to deliver high-performing,
-            search-friendly websites.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            Currently, I’m developing a{" "}
-            <strong>Yacht Booking Web App</strong> with Next.js, Prisma, MySQL,
-            and Stripe integration — combining e-commerce with real-time booking
-            features.
-          </p>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            I’m always eager to learn, experiment with new technologies, and
-            build solutions that create impact.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
+  <>
+  <StructuredData />
+ <AboutClient/>
+  </>
+);         
 }
