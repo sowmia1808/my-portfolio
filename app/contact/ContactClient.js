@@ -36,10 +36,10 @@ export default function ContactPage() {
   return (
     <section className="py-20 px-6 sm:px-10 lg:px-20 max-w-4xl mx-auto bg-gray-50 dark:bg-gray-900 rounded-xl shadow-lg mt-25 mb-10">
       <h6 className="text-xl sm:text-xl font-bold text-center mb-6 text-gray-900 dark:text-gray-100">
-        NEED A FULL STACK WEB DEVELOPER? LET'S BUILD SOMETHING.
+        NEED A FULL STACK WEB DEVELOPER? LETS BUILD SOMETHING.
       </h6>
       <p className="text-center text-gray-700 dark:text-gray-300 mb-12">
-        I'm ready to hear about your project. Don’t hesitate to get in touch using the form below.
+        I am ready to hear about your project. Donot hesitate to get in touch using the form below.
       </p>
 
       <form
