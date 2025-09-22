@@ -47,7 +47,7 @@ export default function ContactPage() {
         className="grid grid-cols-1 md:grid-cols-2 gap-6"
       >
         {/* Project Type */}
-        <div className="flex flex-col">
+        <div className="flex flex-col max-w-7xl">
           <label className="mb-1 text-gray-700 dark:text-gray-300">Select Project Type</label>
           <select
             name="projectType"
