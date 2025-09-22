@@ -17,21 +17,25 @@ export default function Skills() {
   ];
 
   return (
-    <section className="py-12  dark:bg-gray-900 mt-15 ">
-      <h1 className="text-4xl font-bold mb-10 text-center text-gray-800 dark:text-gray-100">
-        My Skills
-      </h1>
+   <section className="py-12 dark:bg-gray-900 mt-15">
+  <h1 className="text-4xl font-bold mb-10 text-center text-gray-800 dark:text-gray-100">
+    My Skills
+  </h1>
 
-      <div className="grid grid-cols-2  sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 px-4 sm:px-6 lg:px-8">
-        {skills.map((skill, i) => (
-          <SkillCard
-            key={i}
-            name={skill.name}
-            icon={skill.icon}
-            className="flex flex-col items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition-transform duration-300"
-          />
-        ))}
-      </div>
-    </section>
+  {/* Centered container with max width */}
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+      {skills.map((skill, i) => (
+        <SkillCard
+          key={i}
+          name={skill.name}
+          icon={skill.icon}
+          className="flex flex-col items-center justify-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition-transform duration-300"
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
   );
 }
