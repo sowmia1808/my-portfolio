@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SocialBar from "@/components/SocialBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +27,7 @@ className={`bg-gray-50 text-gray-900 flex flex-col min-h-screen ${geistSans.vari
       >
         <Navbar />
         {children}
+        <SocialBar/>
           <Footer />
       </body>
     </html>
