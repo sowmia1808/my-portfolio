@@ -40,7 +40,7 @@ export default function HomeClient() {
       </div>
 
       {/* Right - Image */}
-      <div className="md:w-1/2 flex justify-center mb-10 md:mb-0">
+      <div className="md:w-1/3 flex justify-center mb-10 md:mb-0">
         <div className="relative w-25 h-25 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-l overflow-hidden shadow-xl">
           <Image
             src="/images/pp.png"
