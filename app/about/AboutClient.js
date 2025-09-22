@@ -15,7 +15,7 @@ export default function AboutClient() {
         {/* Left - Image */}
         <div className="flex justify-center md:justify-end">
           <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-xl shadow-2xl hover:scale-105 transform transition duration-500 overflow-hidden">
-            <image
+            <Image
               src="/images/pp.png"
               alt="Sowmia Drillo"
               className="w-full h-full object-contain object-center"
