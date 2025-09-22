@@ -75,17 +75,7 @@ export default function Navbar() {
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all group-hover:w-full"></span>
             </li>
           ))}
-          <li>
-            <a
-              href="https://wa.me/971565466486"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-500 text-white font-semibold hover:bg-green-600 transition shadow-md"
-            >
-              <FaWhatsapp className="text-lg" />
-              WhatsApp Me
-            </a>
-          </li>
+          
         </ul>
       </div>
 
