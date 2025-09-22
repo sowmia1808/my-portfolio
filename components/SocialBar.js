@@ -8,7 +8,7 @@ export default function SocialBar() {
       <div className="hidden md:flex fixed right-4 top-1/3 flex-col gap-4 z-50">
         {/* LinkedIn */}
         <a
-          href="www.linkedin.com/in/mary-sowmia"
+          href="https://www.linkedin.com/in/mary-sowmia"
           target="_blank"
           rel="noopener noreferrer"
           className="p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition"
