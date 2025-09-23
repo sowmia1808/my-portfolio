@@ -6,12 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sitemap": "next-sitemap",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
     "framer-motion": "^12.23.14",
     "next": "15.5.2",
+    "next-sitemap": "^4.2.3",
     "puppeteer": "^24.19.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",

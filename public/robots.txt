@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.marysowmia.shop
+
+# Sitemaps
+Sitemap: https://www.marysowmia.shop/sitemap.xml
