@@ -3,15 +3,17 @@
 export const metadata = {
   title: "Mary Sowmia | Full Stack Developer & Freelance Web Developer",
   description:
-    "Hi, I’m Mary Sowmia 👋. Full Stack Developer, WordPress & SEO Specialist. Available for freelance projects. Experienced in Next.js, React, Tailwind CSS, and building responsive, high-performing websites.",
+    "Mary Sowmia 👋 — Full Stack Developer & Freelance Web Developer. Skilled in Next.js, React, Tailwind CSS, WordPress & SEO. Available for projects worldwide, including UAE.",
   keywords: [
     "Mary Sowmia",
     "Full Stack Developer",
+    "Freelance Web Developer",
     "Next.js Developer",
     "React Developer",
     "WordPress Developer",
     "SEO Specialist",
-    "Freelance Web Developer",
+    "Remote Web Developer",
+    "Hire Web Developer Online",
     "Dubai",
     "UAE"
   ],
@@ -19,7 +21,7 @@ export const metadata = {
   openGraph: {
     title: "Mary Sowmia | Full Stack Developer & Freelance Web Developer",
     description:
-      "Hi, I’m Mary Sowmia 👋. Full Stack Developer, WordPress & SEO Specialist. Available for freelance projects.",
+      "Full Stack Developer & Freelance Web Developer. Expert in Next.js, React, Tailwind CSS, WordPress & SEO. Available for projects worldwide, including UAE.",
     url: "https://www.marysowmia.shop",
     siteName: "Mary Sowmia Portfolio",
     images: [
@@ -36,7 +38,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Mary Sowmia | Full Stack Developer & Freelance Web Developer",
     description:
-      "Hi, I’m Mary Sowmia 👋. Full Stack Developer, WordPress & SEO Specialist. Available for freelance projects.",
+      "Full Stack Developer & Freelance Web Developer. Skilled in Next.js, React, Tailwind CSS, WordPress & SEO. Available for projects worldwide, including UAE.",
     images: ["https://www.marysowmia.shop/images/pp.png"],
     creator: "@MarySowmia",
   },

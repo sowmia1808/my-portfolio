@@ -1,25 +1,28 @@
 // app/experience/page.js
 
 export const metadata = {
-  title: "Mary Sowmia | Work Experience | Full Stack Developer",
+  title: "Mary Sowmia | Full Stack Developer & Freelance Web Developer",
   description:
-    "Explore the professional experience of Mary Sowmia 👩‍💻, Full Stack Developer skilled in React, Next.js, Tailwind CSS, Express.js, and MySQL. Available for freelance projects in Dubai and UAE.",
+    "Mary Sowmia 👋 — Full Stack Developer & Freelance Web Developer. Skilled in Next.js, React, Tailwind CSS, WordPress & SEO. Available for projects worldwide, including UAE.",
   keywords: [
-    "Mary Sowmia Experience",
+    "Mary Sowmia",
     "Full Stack Developer",
-    "React Developer",
+    "Freelance Web Developer",
     "Next.js Developer",
-    "Work History",
-    "Freelance Developer",
+    "React Developer",
+    "WordPress Developer",
+    "SEO Specialist",
+    "Remote Web Developer",
+    "Hire Web Developer Online",
     "Dubai",
-    "UAE",
+    "UAE"
   ],
   robots: "index, follow",
   openGraph: {
-    title: "Mary Sowmia | Work Experience | Full Stack Developer",
+    title: "Mary Sowmia | Full Stack Developer & Freelance Web Developer",
     description:
-      "Discover Mary Sowmia's professional background as a Full Stack Developer, with expertise in React, Next.js, and MySQL.",
-    url: "https://www.marysowmia.shop/experience",
+      "Full Stack Developer & Freelance Web Developer. Expert in Next.js, React, Tailwind CSS, WordPress & SEO. Available for projects worldwide, including UAE.",
+    url: "https://www.marysowmia.shop",
     siteName: "Mary Sowmia Portfolio",
     images: [
       {
@@ -33,9 +36,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mary Sowmia | Work Experience | Full Stack Developer",
+    title: "Mary Sowmia | Full Stack Developer & Freelance Web Developer",
     description:
-      "Professional background of Mary Sowmia, Full Stack Developer, available for freelance projects in Dubai and UAE.",
+      "Full Stack Developer & Freelance Web Developer. Skilled in Next.js, React, Tailwind CSS, WordPress & SEO. Available for projects worldwide, including UAE.",
     images: ["https://www.marysowmia.shop/images/pp.png"],
     creator: "@MarySowmia",
   },
