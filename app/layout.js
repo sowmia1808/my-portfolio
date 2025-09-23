@@ -18,7 +18,7 @@ export const metadata = {
   title: "My Portfolio",
   description: "Full Stack Developer Portfolio",
 };
-
+import { Analytics } from '@vercel/analytics/next';
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -27,6 +27,7 @@ className={`bg-gray-50 text-gray-900 flex flex-col min-h-screen ${geistSans.vari
       >
         <Navbar />
         {children}
+        <Analytics />
         <SocialBar/>
           <Footer />
       </body>
