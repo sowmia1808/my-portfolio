@@ -7,7 +7,15 @@ export const metadata = {
   keywords: [
     "Mary Sowmia",
     "Full Stack Developer",
-    "Freelance Web Developer",
+    "Full Stack Developer in UAE",
+    "Full Stack Developer in dubai",
+    "Full Stack Developer in sharjah",
+    "Full Stack Developer in Ras Al Khaimah",
+    "Full Stack Developer in Remote",
+    "Freelance Web Developer in UAE",
+    "Freelance Web Developer in dubai",
+    "Freelance Web Developer in sharjah",
+    "Freelance Web Developer in Ras Al Khaimah",
     "Next.js Developer",
     "React Developer",
     "WordPress Developer",
@@ -19,7 +27,7 @@ export const metadata = {
   ],
   robots: "index, follow",
   openGraph: {
-    title: "Mary Sowmia | Full Stack Developer & Freelance Web Developer",
+    title: "Mary Sowmia | Full Stack Developer & Freelance Web Developer React js Developer, Next Js Developer",
     description:
       "Full Stack Developer & Freelance Web Developer. Expert in Next.js, React, Tailwind CSS, WordPress & SEO. Available for projects worldwide, including UAE.",
     url: "https://www.marysowmia.shop",
