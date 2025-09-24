@@ -1,7 +1,9 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ContactPage() {
+    const router = useRouter();
   const [formData, setFormData] = useState({
     projectType: "",
     services: "",
@@ -12,26 +14,45 @@ export default function ContactPage() {
     website: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false); 
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    alert("Thank you! Your project inquiry has been sent.");
-    setFormData({
-      projectType: "",
-      services: "",
-      budget: "",
-      timeline: "",
-      name: "",
-      email: "",
-      website: "",
-      message: "",
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+   setLoading(true); 
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
     });
-  };
+
+    if (res.ok) { 
+      alert("Thank you! Your project inquiry has been sent.");
+      setFormData({
+        projectType: "",
+        services: "",
+        budget: "",
+        timeline: "",
+        name: "",
+        email: "",
+        website: "",
+        message: "",
+      });
+      router.push("/"); 
+    } else {
+      alert("Oops! Something went wrong.");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Failed to send inquiry.");
+  } finally {
+      setLoading(false); // hide sending message
+    }
+};
 
   return (
     <section className="py-20 px-6 sm:px-10 lg:px-20 max-w-4xl mx-auto bg-gray-50 dark:bg-gray-900 rounded-xl shadow-lg mt-25 mb-10">
@@ -94,10 +115,10 @@ export default function ContactPage() {
             className="p-3 border rounded-lg bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
           >
             <option value="">Select Budget</option>
-            <option value="Below $500">Below $500</option>
-            <option value="$500 - $1000">$500 - $1000</option>
-            <option value="$1000 - $3000">$1000 - $3000</option>
-            <option value="Above $3000">Above $3000</option>
+            <option value="Below $500">Below  AED1000</option>
+            <option value="$500 - $1000">AED1000 - 2000</option>
+            <option value="$1000 - $3000">AED2000 - 3000</option>
+            <option value="Above $3000">Above AED3000</option>
           </select>
         </div>
 
@@ -179,8 +200,9 @@ export default function ContactPage() {
           <button
             type="submit"
             className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            disabled={loading} // disable button while sending
           >
-            Send Inquiry
+            {loading ? "Sending..." : "Send Inquiry"} 
           </button>
         </div>
       </form>

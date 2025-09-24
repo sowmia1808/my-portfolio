@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -40,78 +41,106 @@ export default function Navbar() {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
-      }`}
+
+<nav
+  className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+    scrolled
+      ? "bg-white/95 backdrop-blur-md shadow-lg"
+      : "bg-transparent"
+  }`}
+>
+  <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+    {/* Logo */}
+    <h1 className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer">
+      Mary Sowmia
+    </h1>
+
+    {/* Desktop Menu */}
+    <ul className="hidden md:flex md:items-center md:space-x-10">
+      {navLinks.map((link) => (
+        <li key={link.href} className="group relative">
+          <Link
+            href={link.href}
+            className="text-gray-800 font-medium hover:text-blue-600 transition"
+          >
+            {link.label}
+          </Link>
+          <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all group-hover:w-full"></span>
+        </li>
+      ))}
+    </ul>
+
+    {/* Desktop Contact Info with Icons */}
+    <div className="hidden md:flex items-center space-x-6">
+      <a href="tel:+971565466486" className="flex items-center gap-2 text-gray-700 hover:text-blue-600">
+        <FaPhoneAlt className="text-blue-600" />
+        <span className="text-sm">+971 56 546 6486</span>
+      </a>
+      <a href="mailto:marysowmia@gmail.com" className="flex items-center gap-2 text-gray-700 hover:text-blue-600">
+        <FaEnvelope className="text-blue-600" />
+        <span className="text-sm">sowmia.spangles@gmail.com</span>
+      </a>
+    </div>
+
+    {/* Hamburger for mobile */}
+    <button
+      className="md:hidden text-2xl text-gray-800 dark:text-gray-200 focus:outline-none"
+      onClick={() => setOpen(!open)}
     >
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <h1 className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer">
-          Mary Sowmia
-        </h1>
+      {open ? "✕" : "☰"}
+    </button>
+  </div>
 
-        {/* Hamburger for mobile */}
-        <button
-          className="md:hidden text-2xl text-gray-800 dark:text-gray-200 focus:outline-none"
-          onClick={() => setOpen(!open)}
+  {/* Mobile Drawer Menu */}
+  <div
+    ref={menuRef}
+    className={`fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform transition-transform duration-300 ease-in-out md:hidden z-50 ${
+      open ? "translate-x-0" : "translate-x-full"
+    }`}
+  >
+    <ul className="flex flex-col mt-20 space-y-6 px-6">
+      {navLinks.map((link) => (
+        <li key={link.href}>
+          <Link
+            href={link.href}
+            className="text-gray-800 font-medium text-lg hover:text-blue-600 transition"
+            onClick={() => setOpen(false)}
+          >
+            {link.label}
+          </Link>
+        </li>
+      ))}
+
+      {/* Mobile Contact Info */}
+      <li>
+        <a href="tel:+971565466486" className="flex items-center gap-3 text-gray-800 text-lg hover:text-blue-600">
+          <FaPhoneAlt className="text-blue-600" />
+          +971 56 546 6486
+        </a>
+      </li>
+      <li>
+        <a href="mailto:marysowmia@gmail.com" className="flex items-center gap-3 text-gray-800 text-lg hover:text-blue-600">
+          <FaEnvelope className="text-blue-600" />
+          marysowmia@gmail.com
+        </a>
+      </li>
+
+      {/* WhatsApp Button */}
+      <li>
+        <a
+          href="https://wa.me/971565466486"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-500 text-white font-semibold hover:bg-green-600 transition shadow-md mt-4"
+          onClick={() => setOpen(false)}
         >
-          {open ? "✕" : "☰"}
-        </button>
+          <FaWhatsapp className="text-lg" />
+          WhatsApp Me
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-        {/* Desktop / Tablet Menu */}
-        <ul className="hidden md:flex md:items-center md:space-x-10">
-          {navLinks.map((link) => (
-            <li key={link.href} className="group relative">
-              <Link
-                href={link.href}
-                className="text-gray-800 font-medium hover:text-blue-600 transition"
-              >
-                {link.label}
-              </Link>
-              {/* underline on hover */}
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-600 transition-all group-hover:w-full"></span>
-            </li>
-          ))}
-          
-        </ul>
-      </div>
-
-      {/* Mobile Drawer Menu */}
-      <div
-        ref={menuRef}
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform transition-transform duration-300 ease-in-out md:hidden z-50 ${
-          open ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <ul className="flex flex-col mt-20 space-y-6 px-6">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className="text-gray-800 font-medium text-lg hover:text-blue-600 transition"
-                onClick={() => setOpen(false)}
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-          <li>
-            <a
-              href="https://wa.me/971565466486"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-500 text-white font-semibold hover:bg-green-600 transition shadow-md mt-4"
-              onClick={() => setOpen(false)}
-            >
-              <FaWhatsapp className="text-lg" />
-              WhatsApp Me
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
   );
 }
