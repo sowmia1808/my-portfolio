@@ -50,6 +50,10 @@ export const metadata = {
     images: ["https://www.marysowmia.shop/images/pp.png"],
     creator: "@MarySowmia",
   },
+  alternates: {
+  canonical: "https://www.marysowmia.shop",
+},
+
 };
 
 import StructuredData from "@/components/StructuredData";

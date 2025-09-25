@@ -41,6 +41,10 @@ export const metadata = {
       "Full Stack Developer & Freelance Web Developer. Skilled in Next.js, React, Tailwind CSS, WordPress & SEO. Available for projects worldwide, including UAE.",
     images: ["https://www.marysowmia.shop/images/pp.png"],
     creator: "@MarySowmia",
+    alternates: {
+  canonical: "https://www.marysowmia.shop",
+},
+
   },
 };
 

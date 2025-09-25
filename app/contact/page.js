@@ -40,6 +40,10 @@ export const metadata = {
     images: ["https://yourdomain.com/images/pp.png"],
     creator: "@MarySowmia",
   },
+  alternates: {
+  canonical: "https://www.marysowmia.shop",
+},
+
 };
 
 export default function ContactPage() {
