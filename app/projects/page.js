@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Mary Sowmia | Full Stack Developer & Freelance Web Developer",
+  title:  "Full Stack Developer & Freelance Web Developer | Mary Sowmia",
   description:
     "Mary Sowmia 👋 — Full Stack Developer & Freelance Web Developer. Skilled in Next.js, React, Tailwind CSS, WordPress & SEO. Available for projects worldwide, including UAE.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata = {
   ],
   robots: "index, follow",
   openGraph: {
-    title: "Mary Sowmia | Full Stack Developer & Freelance Web Developer",
+    title:  "Full Stack Developer & Freelance Web Developer | Mary Sowmia",
     description:
       "Full Stack Developer & Freelance Web Developer. Expert in Next.js, React, Tailwind CSS, WordPress & SEO. Available for projects worldwide, including UAE.",
     url: "https://www.marysowmia.shop",
@@ -34,7 +34,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mary Sowmia | Full Stack Developer & Freelance Web Developer",
+    title:  "Full Stack Developer & Freelance Web Developer | Mary Sowmia",
     description:
       "Full Stack Developer & Freelance Web Developer. Skilled in Next.js, React, Tailwind CSS, WordPress & SEO. Available for projects worldwide, including UAE.",
     images: ["https://www.marysowmia.shop/images/pp.png"],

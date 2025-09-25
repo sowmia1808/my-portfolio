@@ -2,7 +2,7 @@ import ContactClient from "./ContactClient";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata = {
-  title: "Contact Mary Sowmia | Full Stack Developer & Freelance Web Developer",
+  title:  "Full Stack Developer & Freelance Web Developer | Mary Sowmia",
   description:
     "Get in touch with Mary Sowmia 👋, Full Stack Developer, WordPress & SEO Specialist. Available for freelance projects in Dubai and UAE.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata = {
   ],
   robots: "index, follow",
   openGraph: {
-    title: "Contact Mary Sowmia | Full Stack Developer & Freelance Web Developer",
+    title: " Full Stack Developer & Freelance Web Developer | Contact Mary Sowmia",
     description:
       "Reach out to Mary Sowmia, a Full Stack Developer and SEO Specialist, available for freelance projects in Dubai and UAE.",
     url: "https://yourdomain.com/contact",
