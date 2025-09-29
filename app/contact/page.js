@@ -2,22 +2,24 @@ import ContactClient from "./ContactClient";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata = {
-  title:  "Full Stack Developer & Freelance Web Developer | Mary Sowmia",
+title: "Freelance Full Stack Web Developer | Mary Sowmia | UAE",
   description:
-    "Get in touch with Mary Sowmia 👋, Full Stack Developer, WordPress & SEO Specialist. Available for freelance projects in Dubai and UAE.",
-  keywords: [
-    "Mary Sowmia",
-    "Contact Mary Sowmia",
-    "Full Stack Developer",
-    "Freelance Web Developer",
-    "WordPress Developer",
-    "SEO Specialist",
-    "Dubai",
-    "UAE",
-  ],
+    "Get in touch with Mary Sowmia, Full Stack Developer, WordPress & SEO Specialist. Available for freelance projects in Dubai and UAE.",
+ keywords: [
+  "Freelance Full Stack Web Developer",
+  "Hire Full Stack Developer Dubai",
+  "Next.js Freelance Developer UAE",
+  "React Web Developer for hire",
+  "WordPress Developer Freelance",
+  "Remote Web Developer",
+  "SEO-friendly Web Developer",
+  "Mary Sowmia Portfolio",
+  "Dubai Web Developer",
+  "UAE Freelance Developer"
+],
   robots: "index, follow",
   openGraph: {
-    title: " Full Stack Developer & Freelance Web Developer | Contact Mary Sowmia",
+title: "Freelance Full Stack Web Developer | Mary Sowmia | UAE",
     description:
       "Reach out to Mary Sowmia, a Full Stack Developer and SEO Specialist, available for freelance projects in Dubai and UAE.",
     url: "https://yourdomain.com/contact",
@@ -34,9 +36,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Mary Sowmia | Full Stack Developer & Freelance Web Developer",
-    description:
-      "Reach out to Mary Sowmia, Full Stack Developer and SEO Specialist, available for freelance projects.",
+title: "Freelance Full Stack Web Developer | Mary Sowmia | UAE",
+    description: "Hire Mary Sowmia — Freelance Full Stack Web Developer. Expert in Next.js, React, Tailwind CSS, WordPress & SEO. Projects worldwide, Dubai/UAE.",
     images: ["https://yourdomain.com/images/pp.png"],
     creator: "@MarySowmia",
   },

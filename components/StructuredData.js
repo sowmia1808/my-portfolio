@@ -14,9 +14,9 @@ export default function StructuredData() {
       "url": "https://www.marysowmia.shop/",
       "sameAs": [
         "https://www.linkedin.com/in/marysowmia",
-        "https://github.com/marysowmia"
+        "https://github.com/sowmia1808"
       ],
-      "jobTitle": "Full Stack Developer",
+      "jobTitle": "Freelance Full Stack web app Developer UAE",
       "description": "Full Stack Developer, WordPress & SEO Specialist. Available for freelance projects in UAE and worldwide. Skilled in Next.js, React, Tailwind CSS, MySQL, and WordPress.",
       "image": "https://www.marysowmia.shop/images/pp.png",
       "knowsAbout": [
