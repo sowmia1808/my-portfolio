@@ -1,7 +1,15 @@
 "use client";
 import { FaLinkedin, FaGithub, FaWhatsapp, FaPhone } from "react-icons/fa";
+import { useEffect } from "react";
 
 export default function SocialBar() {
+    useEffect(() => {
+    // Load LinkedIn badge script once
+    const script = document.createElement("script");
+    script.src = "https://platform.linkedin.com/badges/js/profile.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
   return (
     <>
       {/* Desktop (Right Side Vertical Bar) */}
@@ -15,6 +23,7 @@ export default function SocialBar() {
         >
           <FaLinkedin size={20} />
         </a>
+        
 
         {/* GitHub */}
         <a
@@ -43,6 +52,22 @@ export default function SocialBar() {
         >
           <FaPhone size={20} />
         </a>
+        <div
+      className="badge-base LI-profile-badge"
+      data-locale="en_US"
+      data-size="medium"
+      data-theme="dark"
+      data-type="VERTICAL"
+      data-vanity="mary-sowmia"
+      data-version="v1"
+    >
+      <a
+        className="badge-base__link LI-simple-link"
+        href="https://www.linkedin.com/in/mary-sowmia"
+      >
+        Mary Sowmia
+      </a>
+    </div>
       </div>
 
       {/* Mobile (Bottom Horizontal Bar) */}
