@@ -1,4 +1,15 @@
+"use client";
+import { useEffect } from "react";
+
+
 export default function Footer() {
+  useEffect(() => {
+    // Load LinkedIn badge script once
+    const script = document.createElement("script");
+    script.src = "https://platform.linkedin.com/badges/js/profile.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
   return (
     <footer className="bg-gray-900 text-gray-300 py-6 mt-auto">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
@@ -33,6 +44,23 @@ export default function Footer() {
           </a>
         </div>
       </div>
+       <div
+            className="badge-base LI-profile-badge"
+            data-locale="en_US"
+            data-size="medium"
+            data-theme="dark"
+            data-type="VERTICAL"
+            data-vanity="mary-sowmia"
+            data-version="v1"
+          >
+            <a
+              className="badge-base__link LI-simple-link"
+              href="https://www.linkedin.com/in/mary-sowmia"
+            >
+              Mary Sowmia
+            </a>
+          </div>
+
     </footer>
   );
 }
