@@ -74,7 +74,7 @@ export default function Navbar() {
     <div className="hidden md:flex items-center space-x-6">
       <a href="tel:+971565466486" className="flex items-center gap-2 text-gray-700 hover:text-blue-600">
         <FaPhoneAlt className="text-blue-600" />
-        <span className="text-sm">+971 56 546 6486</span>
+        <span className="text-sm">+971 566440702</span>
       </a>
       <a href="mailto:marysowmia@gmail.com" className="flex items-center gap-2 text-gray-700 hover:text-blue-600">
         <FaEnvelope className="text-blue-600" />
@@ -115,20 +115,20 @@ export default function Navbar() {
       <li>
         <a href="tel:+971565466486" className="flex items-center gap-3 text-gray-800 text-lg hover:text-blue-600">
           <FaPhoneAlt className="text-blue-600" />
-          +971 56 546 6486
+          +971 566 44 0702
         </a>
       </li>
       <li>
         <a href="mailto:marysowmia@gmail.com" className="flex items-center gap-3 text-gray-800 text-lg hover:text-blue-600">
           <FaEnvelope className="text-blue-600" />
-          marysowmia@gmail.com
+          sowmia.spangles@gmail.com
         </a>
       </li>
 
       {/* WhatsApp Button */}
       <li>
         <a
-          href="https://wa.me/971565466486"
+          href="https://wa.me/971566440702"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-500 text-white font-semibold hover:bg-green-600 transition shadow-md mt-4"
